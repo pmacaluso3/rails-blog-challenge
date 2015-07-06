@@ -1,0 +1,14 @@
+<%= link_to "Create a new entry", new_entry_path %>
+<h1>
+  All your entries!
+</h1>
+<% @entries.each do |entry| %>
+  <h3>
+    <a href="/entries/<%= entry.id %>">
+      <%= entry.title %>
+    </a>
+  </h3>
+  <p>
+    <%= entry.content %>
+  </p>
+<% end %>

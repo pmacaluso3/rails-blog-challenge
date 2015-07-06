@@ -1,0 +1,32 @@
+<%= link_to "Back to all entries", entries_path %>
+<h3>
+  Create a new entry
+</h3>
+<%= form_for :entry, url: entries_path do |f|%>
+  <% if @errors %>
+    <p>
+      <%= @errors %>
+    </p>
+  <% end %>
+  <p>
+    <div>
+      <%= f.label :title %>
+    </div>
+    <div>
+      <%= f.text_field :title %>
+    </div>
+  </p>
+  <p>
+    <div>
+      <%= f.label :content %>
+    </div>
+    <div>
+      <%= f.text_area :content %>
+    </div>
+  </p>
+  <p>
+    <div>
+      <%= f.submit %>
+    </div>
+  </p>
+<% end %>

@@ -1,0 +1,14 @@
+<%= link_to "Back to all entries", entries_path %>
+
+<h3>
+  <%= @entry.title %>
+</h3>
+<p>
+  <%= @entry.content %>
+</p>
+<p>
+  <%= link_to "Edit this entry", edit_entry_path(@entry) %>
+</p>
+<p>
+  <%= link_to "Delete this entry", entry_path(@entry), method: :delete %>
+</p>
